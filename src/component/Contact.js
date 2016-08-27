@@ -1,19 +1,16 @@
 import React from 'react';
 //const{component} = 'react'
 import Link from './Link';
-import About from './About';
 
-class App extends React.Component{
+class Contact extends React.Component{
   render(){
     return (
       <div>
         <Link />
-        <About />
-
-        This is app
-    </div>
+        This is Contact
+      </div>
     )
   }
 }
 
-export default App;
+export default Contact;
