@@ -1,18 +1,21 @@
-import React from 'react';
-//const{component} = 'react'
-import Link from './Link';
-import About from './About';
+import React, {Component} from 'react';
 
-class App extends React.Component{
-  render(){
+import {Link} from 'react-router';
+
+class App extends Component {
+  render() {
     return (
       <div>
-        <Link />
-        <About />
-
-        This is app
-    </div>
-    )
+        <Link to={'/'}>Home</Link> |
+        <Link to={'/about'}>About Us</Link> |
+        <Link to={'/contact'}>Contact US</Link>
+        <div className="children">
+          {
+            this.props.children
+          }
+        </div>
+      </div>
+    );
   }
 }
 

@@ -1,17 +1,12 @@
-/**
- * Created by ttnd on 27/8/16.
- */
-console.log("Hello KMT");
-
+import 'babel-polyfill';
 import React from 'react';
-
+import {Router, browserHistory} from 'react-router';
 import {render} from 'react-dom';
+import routes from './routes';
 
-import App from './component/app'
-
+import App from './component/app';
 
 render(
-  <App />,
-    document.getElementById("app")
-
-)
+  <Router routes={routes} history={browserHistory} />,
+  document.getElementById("app")
+);
